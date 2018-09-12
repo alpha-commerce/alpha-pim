@@ -3,4 +3,3 @@ steps:
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
 images:
 - 'gcr.io/$PROJECT_ID/quickstart-image'
-gcloud builds submit --config cloudbuild.yaml
