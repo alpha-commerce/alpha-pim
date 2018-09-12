@@ -1,5 +1,6 @@
 steps:
-- name: 'github.com/alpha-commerce/alpha-pim/'
-  args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
-images:
-- 'gcr.io/$PROJECT_ID/quickstart-image'
+- name: 'gcr.io/cloud-builders/mvn'
+  args: ['install']
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '--tag=gcr.io/$PROJECT_ID/spring-boot', '.']
+images: ['gcr.io/$PROJECT_ID/spring-boot']
