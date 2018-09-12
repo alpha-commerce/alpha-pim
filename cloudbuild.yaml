@@ -1,5 +1,5 @@
 steps:
-- name: 'gcr.io/cloud-builders/alpha-pim'
+- name: 'github.com/alpha-commerce/alpha-pim/'
   args: [ 'build', '-t', 'gcr.io/$PROJECT_ID/quickstart-image', '.' ]
 images:
 - 'gcr.io/$PROJECT_ID/quickstart-image'
