@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
       id: 1
-      author: marceloverdijk
+      author: annamalai.p
       changes:
         - createTable:
-            tableName: person
+            tableName: pim
             columns:
               - column:
                   name: id
@@ -14,25 +14,25 @@ databaseChangeLog:
                     primaryKey: true
                     nullable: false
               - column:
-                  name: first_name
+                  name: name
                   type: varchar(255)
                   constraints:
                     nullable: false
               - column:
-                  name: last_name
+                  name: description
                   type: varchar(255)
                   constraints:
                     nullable: false
   - changeSet:
       id: 2
-      author: marceloverdijk
+      author: annamalai.p
       changes:
         - insert:
-            tableName: person
+            tableName: pim
             columns:
               - column:
-                  name: first_name
-                  value: Marcel
+                  name: name
+                  value: Tooth Paste Alpha
               - column:
-                  name: last_name
-                  value: Overdijk
+                  name: description
+                  value: Tooth Paste manufactured by the great research institute of the world
