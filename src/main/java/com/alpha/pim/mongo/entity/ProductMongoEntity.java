@@ -8,19 +8,10 @@ import com.alpha.pim.rest.entity.Product;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter
-@Setter
 public class ProductMongoEntity {
 
   public ProductMongoEntity() {
     super();
-  }
-
-  public ProductMongoEntity(ObjectId id, Product product) {
-    this.id = id;
-    this.name = product.getName();
-    this.description = product.getDescription();
-    this.maxRetailPrice = product.getMaxRetailPrice();
   }
 
   public ProductMongoEntity(Product product) {
@@ -30,8 +21,18 @@ public class ProductMongoEntity {
   }
 
   @Id
+  @Getter
   private ObjectId id;
+
+  @Getter
+  @Setter
   private String name;
+
+  @Getter
+  @Setter
   private String description;
-  private String maxRetailPrice;
+
+  @Getter
+  @Setter
+  private Long maxRetailPrice;
 }
