@@ -1,0 +1,17 @@
+{
+	"createProductSuccess": {
+		"name": "Tooth Paste",
+		"description": "No 1 tooth paste.",
+		"maxRetailPrice": 40
+	},
+	"updateProductSuccess": {
+		"name": "Tooth Paste",
+		"description": "No 1 tooth paste.",
+		"maxRetailPrice": 40
+	},
+	"updateProductDetailsSuccess": {
+		"name": "Tooth Paste",
+		"description": "No 1 tooth paste.",
+		"maxRetailPrice": 40
+	}
+}

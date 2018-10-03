@@ -1,0 +1,3 @@
+product:
+  database:
+    impl: mongo
