@@ -76,21 +76,21 @@ public class PimApplicationTests {
     productId = (new JSONObject(response)).getString("id");
   }
 
-  //@Test
+  @Test
   public void testProduct2FindAll() throws Exception {
     MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/products");
     mvc.perform(request.contentType(MediaType.APPLICATION_JSON).secure(true))
       .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
   }
 
-  //@Test
+  @Test
   public void testProduct2Find() throws Exception {
     MockHttpServletRequestBuilder request = MockMvcRequestBuilders.get("/products/{id}", productId);
     mvc.perform(request.contentType(MediaType.APPLICATION_JSON).secure(true))
       .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
   }
 
-  //@Test
+  @Test
   public void testProduct3Update() throws Exception {
     MockHttpServletRequestBuilder request = MockMvcRequestBuilders.put("/products/{id}", productId);
     request.content(testDataJson.getJSONObject("updateProductSuccess").toString());
@@ -98,7 +98,7 @@ public class PimApplicationTests {
       .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
   }
 
-  //@Test
+  @Test
   public void testProduct3UpdateDetails() throws Exception {
     MockHttpServletRequestBuilder request = MockMvcRequestBuilders.patch("/products/{id}", productId);
     request.content(testDataJson.getJSONObject("updateProductDetailsSuccess").toString());
@@ -106,7 +106,7 @@ public class PimApplicationTests {
       .andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
   }
 
-  //@Test
+  @Test
   public void testProduct4Delete() throws Exception {
     MockHttpServletRequestBuilder request = MockMvcRequestBuilders.delete("/products/{id}", productId);
     mvc.perform(request.contentType(MediaType.APPLICATION_JSON).secure(true))
